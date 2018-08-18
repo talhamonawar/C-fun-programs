@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	double pi = 3.14159265358979;
+	string choice;
+	float radius;
+	double circumference2;
+	cout << "Enter whether you want the diameter, radius, circumference, or area calculated" << endl;
+	cin >> choice;
+	if (choice == "circumference" || choice== "CIRCUMFERENCE" || choice == "Circumference") {
+		cout << "Enter the radius of your circle" << endl;
+		
+		cin >> radius;
+		double circumference = (2 * pi) * radius;
+		cout << circumference << endl;
+	}
+	if (choice == "area" || choice == "AREA" || choice == "Area") {
+		cout << "Enter the radius of your circle" << endl;
+		cin >> radius;
+		double area = pi * (radius * radius);
+		cout << area << endl;
+	}
+	if (choice == "radius" || choice == "RADIUS" || choice == "Radius") {
+		cout << "Enter the circumference of your circle" << endl;
+		cin >> circumference2;
+		double radius2 = (circumference2) / (2 * pi);
+		cout << radius2 << endl;
+	}
+	if (choice == "Diameter" || choice == "diameter" || choice == "DIAMETER") {
+		cout << "Enter the radius of your circle" << endl;
+		cin >> radius;
+		float diameter = (radius * 2);
+		cout << diameter << endl;
+	}
+	system("pause");
+	return 0;
+}
